@@ -1,0 +1,313 @@
+<html><head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+    h2 {
+        color: #d9534f;
+        margin-bottom: 15px;
+    }
+    h3 {
+        color: #333;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+    ul {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+    .highlight {
+        color: #d9534f;
+        font-weight: bold;
+    }
+    .highlight2 {
+        color: #ff9100;
+        font-weight: bold;
+    }
+    .highlight3 {
+        color: #001aff;
+        font-weight: bold;
+    }
+    .diagram {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .diagram img {
+        width: 150px;
+        height: auto;
+    }
+    .recommendation {
+        background-color: #d9edf7;
+        border: 1px solid #bce8f1;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .warning {
+        background-color: #f2dede;
+        border: 1px solid #ebccd1;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .advice {
+        background-color: #fcf8e3;
+        border: 1px solid #faebcc;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+    } 
+    .columns {
+        background-color: white;
+        border: 1px solid #000;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 40px;
+    } 
+    .warning-header {
+        font-size: 1.5em;
+        color: red;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .warning-items {
+        font-size: 1.1em;
+        color: #d9534f;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .table-container {
+        margin: 20px 0 40px 0;
+        overflow-x: auto;
+    }
+    table {
+        width: 60%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        font-size: 16px;
+    }
+    
+    .small-table {
+        width: 35%;
+        border-collapse: collapse;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    th, td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ddd;
+        font-weight: bold;
+        color: #333;
+    }
+    th {
+        background-color: #d3d3d3;
+    }
+    .high-risk {
+        background-color: #f8bfbf;
+    }
+    .medium-risk {
+        background-color: #fdd49a;
+    }
+    .low-risk {
+        background-color: #c5e1a5;
+    }
+    .healthy {
+        background-color: #9ecfff;
+    }
+    .risk-word {
+        color: #d9534f;
+        font-weight: bold;
+    }
+    .note {
+        font-size: 14px;
+        color: #555;
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .risk-low {
+        background-color: #d0e7ff; /* 1%未満 */
+    }
+    .risk-moderate {
+        background-color: #ffefc6; /* 10%未満 */
+    }
+    .risk-high {
+        background-color: #ffd5d5; /* 10%以上 */
+    }
+</style>
+</head><body><div class='container'><div class='warning-header'>注意が必要な項目:</div>
+<div class='warning-items'><a href="#bmi">BMI</a>, <a href="#blood_pressure">血圧</a>, <a href="#triglycerides">中性脂肪</a>, <a href="#blood_sugar">血糖値</a>, <a href="#hba1c">HbA1c</a></div><div><a href="#lh_ratio">LH比についてはこちら</a></div>
+        <div id="bmi" class="columns">
+        <h1>BMI</h1>
+        <h3>肥満（25以上）</h3>
+        <div class="warning">
+        <p>あなたのBMIは<span class="highlight">25以上</span>であり、肥満と判定されました。肥満は生活習慣病のリスクを高めるため、体重管理が推奨されます。</p>
+        </div>
+        <h3>改善方法</h3>
+        <div class="recommendation">
+        <p>適正体重を目指すために、以下の生活習慣改善を取り入れましょう：</p>
+        <ul>
+            <li>バランスの良い食事</li>
+            <li>定期的な運動</li>
+            <li>十分な睡眠</li>
+        </ul>
+        </div>
+        </div>
+    
+
+        <div class="columns">
+        <h1>血圧</h1>
+
+        <!-- Problem Section: High Blood Pressure -->
+        <h3>Ⅱ度以上の高血圧</h3>
+        <div class="warning">
+        <p>今回、あなたの血圧は<span class="highlight">Ⅱ度以上の高血圧</span>になっていました。この血圧レベルの人は、望ましい血圧レベル（収縮期血圧120mmHg未満かつ拡張期血圧80mmHg未満）の人と比べて、約5倍、<span class="highlight">脳卒中や心臓病</span>にかかりやすいことが分かっています。</p>
+
+
+        <!-- Warning Section -->
+        
+            <p>正確な血圧の診断の上で、<span class="highlight">治療が必要となる血圧レベル</span>です。この健診結果を持って、至急かかりつけの医療機関を受診してください。</p>
+        </div>
+        </div>
+        
+
+
+        <div class="columns">
+        <h1>中性脂肪</h1>
+        
+        <!-- Problem Section: High Fat in Blood -->
+        <h3>血液中の脂肪が多い</h3>
+        <div class="warning">
+        <p>血液中に脂肪が多く含まれている状態が確認されました。この状態を<span class="highlight">放置しておくと、急性膵炎</span>になる可能性があります。</p>
+        </div>
+        
+        
+        <!-- Risk of Acute Pancreatitis -->
+        <h3>急性膵炎のリスク</h3>
+        <div class="advice">
+        <p>急性膵炎は、<span class="highlight2">命に関わる可能性がある</span>疾患です。できるだけ早めに<span class="highlight2">医療機関を受診</span>してください。</p>
+        </div>
+        </div>
+        
+
+
+        <div class="columns">
+        <h1>血糖値</h1>
+
+        <!-- Problem Section: Elevated Fasting Blood Glucose -->
+        <h3>血糖の高値</h3>
+        <div class="warning">
+        <p>今回、あなたの<span class="highlight">空腹時血糖値が糖尿病の診断基準を超えています</span>。定期的に医療機関を受診していない場合、早急に受診をしてください。</p>
+        </div>
+        
+        
+        <!-- Risk Factors -->
+        <h3>リスク要因</h3>
+        <div class="advice">
+        <p>高血糖に加えて、脂質異常症や高血圧、喫煙などの要因が重なることで、<span class="highlight2">心筋梗塞や脳梗塞</span>のリスクが高まることが知られています。</p>
+        </div>
+        
+        
+        <!-- Additional Tests Required -->
+        <h3>追加の検査が必要です</h3>
+        <div class="recommendation">
+        <p>網膜症の状態を確認するための眼底検査、腎臓の機能を確認するための血液検査・尿検査を行う必要があります。</p>
+        </div>
+        
+        </div>
+        
+
+
+        <div class="columns">
+        <h1>HbA1c</h1>
+
+        <!-- Problem Section: High HbA1c Level -->
+        <h3>HbA1cが受診勧奨判定値を超えている</h3>
+        <div class="warning">
+        <p>あなたのHbA1cは<span class="highlight">受診勧奨判定値（糖尿病の診断基準）を超えています</span>。定期的に医療機関を受診していないのであれば、すぐに受診してください。</p>
+        </div>
+        
+        <!-- Implications of High HbA1c -->
+        <h3>HbA1cの重要性</h3>
+        <div class="advice">
+        <p>HbA1cは血糖の1～2か月の平均的な高さを示す指標ですが、この値が正常域を超えて高いほど、網膜症や腎症、神経障害に加えて心筋梗塞や脳梗塞等の糖尿病の合併症を発症・悪化させることが分かっています。</p>
+        <p>高血糖のほかに脂質異常症や高血圧、喫煙等の要因が重なるほど、心筋梗塞や脳梗塞を起こしやすくなることが知られています。</p>
+        </div>
+        
+        
+        <!-- Recommended Tests -->
+        <h3>必要な検査</h3>
+        <div class="recommendation">
+        <p>網膜症の状態を確認するための眼底検査、腎臓の機能を判断するための血液検査・尿検査を行う必要があります。</p>
+        </div>
+       
+        </div>
+        
+
+    <div id="lh_ratio" class="columns">    
+    <h1>LH比の評価基準</h1>
+    <p>LH比は、<span class="highlight">LDLコレステロール</span>と<span class="highlight">HDLコレステロール</span>の比率であり、動脈硬化のリスクを評価する重要な指標です。この比率が高いほど動脈硬化のリスクが高まるとされ、心血管疾患の発症リスクも増加します。以下の表は、LH比に基づいて血管内の状態を示したものです。</p>
+    
+    <h3>LH比による血管内の状態</h3>
+    <table>
+        <tr>
+            <th>LH比</th>
+            <th>血管内の状態</th>
+        </tr>
+        <tr class="high-risk">
+            <td>2.5以上</td>
+            <td>血栓ができている可能性が高く、<span class="risk-word">心筋梗塞</span>や<span class="risk-word">脳梗塞</span>の可能性がある状態。</td>
+        </tr>
+        <tr class="medium-risk">
+            <td>2.0以上</td>
+            <td>コレステロールの蓄積が増えて、<span class="risk-word">動脈硬化</span>が疑われる。</td>
+        </tr>
+        <tr class="low-risk">
+            <td>1.5以上</td>
+            <td>コレステロールができ始める。</td>
+        </tr>
+        <tr class="healthy">
+            <td>1.5未満</td>
+            <td>きれいで健康な状態。</td>
+        </tr>
+    </table>
+
+    <h3>改善方法</h3>
+    <div class="recommendation">
+        <p>LH比の適正化を目指すために、以下の生活習慣の改善が推奨されます：</p>
+        <ul>
+            <li>飽和脂肪酸が多い食品の摂取を控える</li>
+            <li>不飽和脂肪酸（オメガ3系）の摂取を増やす</li>
+            <li>適度な運動</li>
+        </ul>
+    </div>
+
+</div>
+    </div></body></html>
