@@ -162,10 +162,12 @@
         background-color: #ffd5d5; /* 10%以上 */
     }
 </style>
-</head><body><div class='container'><div class='warning-header'>注意が必要な項目:</div>
+</head><body><div class='container'><p>すでに治療中の人は医師の指導に従って下さい。</p>
+<p>下記の情報は参考にして下さい。</p>
+<div class='warning-header'>注意が必要な項目:</div>
 <div class='warning-items'><a href="#hdl_cholesterol">HDLコレステロール</a>, <a href="#blood_pressure">血圧</a>, <a href="#triglycerides">中性脂肪</a>, <a href="#hba1c">HbA1c</a></div><div><a href="#lh_ratio">LH比についてはこちら</a></div>
 
-        <div class="columns">
+        <div id="hdl_cholesterol" class="columns">
         <h1>善玉(HDL)コレステロール</h1>
 
         <!-- Problem Section: Low HDL -->
@@ -197,7 +199,7 @@
 
 
 
-        <div class="columns">
+        <div id="blood_pressure" class="columns">
         <h1>血圧</h1>
 
         <!-- Problem Section: Elevated Blood Pressure -->
@@ -228,13 +230,13 @@
 
 
 
-        <div class="columns">
+        <div id="triglycerides" class="columns">
         <h1>中性脂肪</h1>
 
         <!-- Problem Section: High Triglycerides -->
         <h3>中性脂肪の値が高い</h3>
         <div class="warning">
-        <p>脂質検査の結果、あなたの中性脂肪値が<span class="highlight">150mg/dL以上</span>であることが確認されました。この値は、心筋梗塞や狭心症のリスクが約<span class="highlight">2倍</span>に高まるとされています。</p>
+        <p>脂質検査の結果、あなたの中性脂肪値が<span class="highlight">300mg/dL以上</span>であることが確認されました。この値は、心筋梗塞や狭心症のリスクが約<span class="highlight">2倍</span>に高まるとされています。</p>
         </div>
         
         
@@ -265,7 +267,7 @@
 
 
 
-        <div class="columns">
+        <div id="hba1c" class="columns">
         <h1>HbA1c</h1>
 
         <!-- Problem Section: HbA1c Exceeding Normal Range -->

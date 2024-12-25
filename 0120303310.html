@@ -1,0 +1,339 @@
+<html><head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+    h2 {
+        color: #d9534f;
+        margin-bottom: 15px;
+    }
+    h3 {
+        color: #333;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+    ul {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+    .highlight {
+        color: #d9534f;
+        font-weight: bold;
+    }
+    .highlight2 {
+        color: #ff9100;
+        font-weight: bold;
+    }
+    .highlight3 {
+        color: #001aff;
+        font-weight: bold;
+    }
+    .diagram {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .diagram img {
+        width: 150px;
+        height: auto;
+    }
+    .recommendation {
+        background-color: #d9edf7;
+        border: 1px solid #bce8f1;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .warning {
+        background-color: #f2dede;
+        border: 1px solid #ebccd1;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .advice {
+        background-color: #fcf8e3;
+        border: 1px solid #faebcc;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+    } 
+    .columns {
+        background-color: white;
+        border: 1px solid #000;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 40px;
+    } 
+    .warning-header {
+        font-size: 1.5em;
+        color: red;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .warning-items {
+        font-size: 1.1em;
+        color: #d9534f;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .table-container {
+        margin: 20px 0 40px 0;
+        overflow-x: auto;
+    }
+    table {
+        width: 60%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        font-size: 16px;
+    }
+    
+    .small-table {
+        width: 35%;
+        border-collapse: collapse;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    th, td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ddd;
+        font-weight: bold;
+        color: #333;
+    }
+    th {
+        background-color: #d3d3d3;
+    }
+    .high-risk {
+        background-color: #f8bfbf;
+    }
+    .medium-risk {
+        background-color: #fdd49a;
+    }
+    .low-risk {
+        background-color: #c5e1a5;
+    }
+    .healthy {
+        background-color: #9ecfff;
+    }
+    .risk-word {
+        color: #d9534f;
+        font-weight: bold;
+    }
+    .note {
+        font-size: 14px;
+        color: #555;
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .risk-low {
+        background-color: #d0e7ff; /* 1%未満 */
+    }
+    .risk-moderate {
+        background-color: #ffefc6; /* 10%未満 */
+    }
+    .risk-high {
+        background-color: #ffd5d5; /* 10%以上 */
+    }
+</style>
+</head><body><div class='container'><p>すでに治療中の人は医師の指導に従って下さい。</p>
+<p>下記の情報は参考にして下さい。</p>
+<div class='warning-header'>注意が必要な項目:</div>
+<div class='warning-items'><a href="#abdominal_circumference">腹囲</a>, <a href="#ldl_cholesterol">LDLコレステロール</a>, <a href="#blood_pressure">血圧</a>, <a href="#blood_sugar">血糖値</a>, <a href="#hba1c">HbA1c</a></div><div><a href="#lh_ratio">LH比についてはこちら</a></div>
+        <div id="abdominal_circumference" class="columns">
+        <h1>腹囲</h1>
+        <h3>メタボリックシンドローム</h3>
+        <div class="warning">
+        <p>あなたの腹囲はメタボリックシンドロームの基準に該当しています。メタボリックシンドロームは、心血管疾患や糖尿病のリスクを高めるため、生活習慣の改善が必要です。</p>
+        </div>
+        </div>
+    
+
+
+        <div id="ldl_cholesterol" class="columns">
+        <h1>悪玉(LDL)コレステロール</h1>
+
+        
+        <!-- Diagram for High LDL -->
+        <h3>悪玉(LDL)コレステロールが高い</h3>
+        <div class="warning">
+        <p>脂質検査の結果、<span class="highlight">悪玉コレステロールが高い</span>ことが分かりました。この値は、一般的にLDLコレステロールが100mg/dL未満の人と比べて、約1.5倍～2倍、<span class="highlight">心筋梗塞や狭心症になりやすい</span>とされています。</p>
+        </div>
+
+
+        
+        <!-- Recommendation in bullet points -->
+        
+        
+
+        <!-- Warning Section with icon -->
+        <h3>注意点</h3>
+        <div class="advice">
+            <p>もしあなたが医師から糖尿病、慢性腎臓病、心血管病（心筋梗塞・狭心症、脳梗塞、血管の病気）、高血圧等を指摘されている場合やすでに治療中、喫煙者の場合は、動脈硬化が進行しやすく、更に心筋梗塞や狭心症になりやすい状態にあると考えられます。</p>
+            <p>できるだけ早めにかかりつけの医師に相談、または医療機関で再検査を受けてください。</p>
+        </div>
+        
+        <h3>改善方法</h3>
+        
+        <div class="recommendation">
+        <p>以下のような生活習慣を心がけることが推奨されます：</p>
+        <ul>
+            <li><span class="highlight3">飽和脂肪酸</span>が多い動物性の脂肪を控える。</li>
+            <li><span class="highlight3">多価不飽和脂肪酸</span>が多い植物系の食品や魚を積極的に摂る。</li>
+            <li><span class="highlight3">コレステロールの多い食品</span>も控えめに。</li>
+        </ul>
+
+
+
+
+        <!-- Recommendation section -->
+        
+            <p>ご自身で生活習慣の改善に取り組む方法、保健センター等で健康相談や保健指導を受ける方法等があります。3～6か月後にかかりつけの医療機関で再検査を受けるようにしてください。</p>
+        </div>
+        
+        </div>
+        
+
+
+
+
+        <div id="blood_pressure" class="columns">
+        <h1>血圧</h1>
+
+        <!-- Problem Section: Elevated Blood Pressure -->
+        <h3>高値血圧</h3>
+        <div class="warning">
+        <p>今回、あなたの血圧は<span class="highlight">やや高め（高値血圧）</span>でした。この血圧レベルの人は、望ましい血圧レベル（収縮期血圧120mmHg未満かつ拡張期血圧80mmHg未満）の人と比べて、約1.5～2倍、<span class="highlight">脳卒中や心臓病</span>にかかりやすいことが分かっています。</p>
+        </div>
+
+        <!-- Lifestyle Recommendations -->
+        <h3>生活習慣の改善方法</h3>
+        <div class="recommendation">
+        <p>血圧を下げるためには、以下の生活習慣の改善が必要です：</p>
+        <ul>
+            <li>減量</li>
+            <li>適度な運動</li>
+            <li>お酒を減らす</li>
+            <li>減塩</li>
+            <li>野菜を多くし、果物も適度に食べる</li>
+        </ul>
+
+        <!-- Additional Advice Section -->
+        
+            <p>脳心血管病、心房細動、慢性腎臓病、糖尿病、危険因子がある場合は、薬物療法が必要になる可能性があります。医療機関で相談してください。</p>
+        </div>
+        </div>
+        
+
+
+
+
+        <div id="blood_sugar" class="columns">
+        <h1>血糖値</h1>
+
+        <!-- Problem Section: Exceeding Normal Fasting Blood Sugar -->
+        <h3>血糖値が正常域を超えている</h3>
+        <div class="warning">
+        <p>あなたの空腹時血糖値は<span class="highlight">正常域を超えており</span>（糖尿病境界型に相当）、糖尿病の可能性も否定できません。</p>
+        </div>
+        
+        <!-- Recommendations -->
+        <h3>今後の対策</h3>
+        <div class="recommendation">
+        <p>もし、あなたが高血圧や脂質異常症等ほかのリスクを持っていたり、血縁者に糖尿病の人がいる場合は医療機関でブドウ糖負荷試験等の精密検査について相談することをお勧めします。</p>
+        <p>また、食事の改善や運動に取り組むことが重要です。</p>
+        </div>
+        
+        </div>
+        
+
+
+
+
+        <div id="hba1c" class="columns">
+        <h1>HbA1c</h1>
+
+        <!-- Problem Section: HbA1c Exceeding Normal Range -->
+        <h3>HbA1cが正常域を超えている</h3>
+        <div class="warning">
+        <p>あなたのHbA1cは<span class="highlight">正常域を超えており</span>（糖尿病境界型に相当）、糖尿病の可能性も否定できません。</p>
+        </div>
+        
+        <!-- Recommendations -->
+        <h3>今後の対策</h3>
+        <div class="recommendation">
+        <p>もし、あなたが高血圧や脂質異常症等ほかのリスクを持っていたり、血縁者に糖尿病の人がいる場合は医療機関でブドウ糖負荷試験等の精密検査について相談することをお勧めします。</p>
+        <p>また、食事の改善や運動に取り組むことが重要です。</p>
+        
+        </div>
+        
+        </div>
+        
+
+
+    <div id="lh_ratio" class="columns">    
+    <h1>LH比の評価基準</h1>
+    <p>LH比は、<span class="highlight">LDLコレステロール</span>と<span class="highlight">HDLコレステロール</span>の比率であり、動脈硬化のリスクを評価する重要な指標です。この比率が高いほど動脈硬化のリスクが高まるとされ、心血管疾患の発症リスクも増加します。以下の表は、LH比に基づいて血管内の状態を示したものです。</p>
+    
+    <h3>LH比による血管内の状態</h3>
+    <table>
+        <tr>
+            <th>LH比</th>
+            <th>血管内の状態</th>
+        </tr>
+        <tr class="high-risk">
+            <td>2.5以上</td>
+            <td>血栓ができている可能性が高く、<span class="risk-word">心筋梗塞</span>や<span class="risk-word">脳梗塞</span>の可能性がある状態。</td>
+        </tr>
+        <tr class="medium-risk">
+            <td>2.0以上</td>
+            <td>コレステロールの蓄積が増えて、<span class="risk-word">動脈硬化</span>が疑われる。</td>
+        </tr>
+        <tr class="low-risk">
+            <td>1.5以上</td>
+            <td>コレステロールができ始める。</td>
+        </tr>
+        <tr class="healthy">
+            <td>1.5未満</td>
+            <td>きれいで健康な状態。</td>
+        </tr>
+    </table>
+
+    <h3>改善方法</h3>
+    <div class="recommendation">
+        <p>LH比の適正化を目指すために、以下の生活習慣の改善が推奨されます：</p>
+        <ul>
+            <li>飽和脂肪酸が多い食品の摂取を控える</li>
+            <li>不飽和脂肪酸（オメガ3系）の摂取を増やす</li>
+            <li>適度な運動</li>
+        </ul>
+    </div>
+
+</div>
+    </div></body></html>
